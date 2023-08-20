@@ -1,0 +1,68 @@
+h1::after {
+	content: ".";
+	color: red;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(20, 30, 50, 0.5);
+	position: relative;
+}
+
+.box::after,
+.box::before {
+	content: "";
+	display: block;
+	width: 30%;
+	height: 30%;
+	left: 5px;
+	position: absolute;
+}
+
+.box::after {
+	background-color: rgba(84, 200, 74, 0.5);
+	top: 5px;
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		100% 75%,
+		75% 75%,
+		75% 100%,
+		50% 75%,
+		0% 75%
+	);
+}
+
+.box::before {
+	background-color: rgba(200, 103, 161, 0.5);
+	bottom: 5px;
+	clip-path: polygon(
+		50% 0%,
+		61% 35%,
+		98% 35%,
+		68% 57%,
+		79% 91%,
+		50% 70%,
+		21% 91%,
+		32% 57%,
+		2% 35%,
+		39% 35%
+	);
+	border-radius: 50%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li::before {
+	content: "--";
+}
+
+p::first-letter {
+	text-transform: uppercase;
+	font-size: 40px;
+	float: left;
+	margin-right: 5px;
+}
