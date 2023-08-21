@@ -57,7 +57,11 @@ ul {
 }
 
 li::before {
-	content: "--";
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font: var(--fa-font-solid);
+	content: "\f00c";
 }
 
 p::first-letter {
